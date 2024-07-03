@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Dice Roller</string>
+    <string name="roll">Roll</string>
+    <string name="player_2_is_winner">Player 2 is Winner</string>
+    <string name="player_1_is_winner">Player 1 is Winner</string>
+    <string name="_1">1</string>
+    <string name="winner_score_30">Winner score = 20</string>
+    <string name="crrent_player">Current Player</string>
+    <string name="player_1">Player 1</string>
+    <string name="_0">0</string>
+    <string name="_03">0</string>
+    <string name="player_2">Player 2</string>
+    <string name="todo">TODO</string>
+</resources>

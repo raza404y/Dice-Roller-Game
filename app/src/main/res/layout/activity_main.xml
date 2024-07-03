@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll your Dice"
+        android:textSize="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dice"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/dice_1"
+        android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:src="@drawable/trophy"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/dice"
+        app:layout_constraintStart_toEndOf="@+id/winnerText"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:background="@drawable/textview_background"
+        android:gravity="center"
+        android:text="@string/player_1"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview21" />
+
+
+    <TextView
+        android:id="@+id/player2"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:background="@drawable/textview_background"
+        android:gravity="center"
+        android:text="@string/player_2"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/player1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player1" />
+
+
+    <TextView
+        android:id="@+id/textview21"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/textview_background"
+        android:gravity="center"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:text="@string/crrent_player"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@+id/dice"
+        app:layout_constraintStart_toStartOf="@+id/dice"
+        app:layout_constraintTop_toBottomOf="@+id/dice" />
+
+    <TextView
+        android:id="@+id/p1score"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minWidth="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_14ssp"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:background="@drawable/textview2_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/player1"
+        app:layout_constraintStart_toEndOf="@+id/player1"
+        app:layout_constraintTop_toTopOf="@+id/player1" />
+
+    <TextView
+        android:id="@+id/p2score"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:minWidth="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:gravity="center"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        android:text="@string/_03"
+        android:textColor="@color/black"
+        android:background="@drawable/textview2_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/player2"
+        app:layout_constraintEnd_toStartOf="@+id/player2"
+        app:layout_constraintTop_toTopOf="@+id/player2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/rollBtn"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/roll"
+        android:padding="@dimen/_14sdp"
+        android:backgroundTint="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        app:rippleColor="@color/white"
+        android:layout_marginBottom="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winner_score_30"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:paddingTop="@dimen/_3sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:textSize="@dimen/_15ssp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/playAgain"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/play_again"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/dice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dice"
+        app:layout_constraintTop_toTopOf="@+id/dice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
